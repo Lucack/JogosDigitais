@@ -8,6 +8,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/MenuPrincipal.unity
+    guid: 6a11b2270d37c40638a7c1025dc01263
+  - enabled: 1
+    path: Assets/Abertura.unity
+    guid: 7e8a97a37ef40174c9b705985ab1cbb6
+  - enabled: 1
+    path: Assets/MosaicoAudios.unity
+    guid: 0b6f91117d831d640ab41fd8ec8f1f65
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
