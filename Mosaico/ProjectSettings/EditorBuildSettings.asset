@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/MosaicoAudios.unity
     guid: 0b6f91117d831d640ab41fd8ec8f1f65
+  - enabled: 1
+    path: Assets/Creditos.unity
+    guid: 2dfb20d63d950476eab0c6b3454a8f2d
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

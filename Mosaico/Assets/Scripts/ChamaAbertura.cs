@@ -12,4 +12,20 @@ public class ChamaAbertura : MonoBehaviour
         SceneManager.LoadScene("Abertura");
     }
 
+    public void SairGame()
+    {
+        Debug.Log("Saindo do Jogo...");
+        Application.Quit();
+    }
+
+    public void IrParaCreditos()
+    {
+        SceneManager.LoadScene("Creditos");
+    }
+
+    public void VoltarAoMenu()
+    {
+        SceneManager.LoadScene("MenuPrincipal");
+    }
+
 }
