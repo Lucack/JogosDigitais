@@ -1,17 +1,35 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
+using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class ManageMosaicoGame : MonoBehaviour
 {
     public Image parte;
     public Image localMarcado;
+    public TextMeshProUGUI timeText;
+    public AudioClip winClip;
+    public AudioClip errorClip;
+    public AudioClip finalAudio;
+
+    public string menuSceneName = "MenuPrincipal";
 
     float lmLargura, lmAltura;
 
     float timer;
+    float gameTimer;
     bool partesEmbaralhadas = false;
+    bool gameFinished = false;
 
     public AudioClip inicioAudio;
+
+    public static ManageMosaicoGame instance;
+
+    void Awake()
+    {
+        instance = this;
+    }
 
     void criarLocaisMarcados()
     {
@@ -73,7 +91,7 @@ public class ManageMosaicoGame : MonoBehaviour
             lm.name = "Parte" + (i + 1);
             lm.transform.SetParent(GameObject.Find("Canvas").transform);
 
-            Sprite[] todasSprites = Resources.LoadAll<Sprite>("leao");
+            Sprite[] todasSprites = Resources.LoadAll<Sprite>("cubone");
             Sprite s1 = todasSprites[i];
             lm.GetComponent<Image>().sprite = s1;
         }
@@ -124,6 +142,57 @@ public class ManageMosaicoGame : MonoBehaviour
         GameObject.Find("totemPlay").GetComponent<tocadorPlay>().playPlay();
     }
 
+    public void CheckWin()
+    {
+        if (gameFinished) return;
+
+        bool allCorrect = true;
+        for (int i = 1; i <= 25; i++)
+        {
+            GameObject parteObj = GameObject.Find("Parte" + i);
+            GameObject lmObj = GameObject.Find("LM" + i);
+
+            if (parteObj != null && lmObj != null)
+            {
+                if (Vector3.Distance(parteObj.transform.position, lmObj.transform.position) > 0.1f)
+                {
+                    allCorrect = false;
+                    break;
+                }
+            }
+            else
+            {
+                allCorrect = false;
+                break;
+            }
+        }
+
+        if (allCorrect)
+        {
+            gameFinished = true;
+            StartCoroutine(WinSequence());
+        }
+    }
+
+    IEnumerator WinSequence()
+    {
+        print("Mosaico completo! Iniciando sequência final.");
+        
+        if (finalAudio != null)
+        {
+            tocadorInicio.instance.PlayAudio(finalAudio, 1f);
+            yield return new WaitForSeconds(finalAudio.length);
+        }
+        else
+        {
+            // Fallback case if finalAudio is not assigned
+            yield return new WaitForSeconds(1f);
+        }
+
+        print("Retornando ao menu...");
+        SceneManager.LoadScene(menuSceneName);
+    }
+
 
     void Start()
     {
@@ -142,5 +211,15 @@ public class ManageMosaicoGame : MonoBehaviour
             falaPlay();
             partesEmbaralhadas = true;
         }
+
+        if (partesEmbaralhadas && !gameFinished)
+        {
+            gameTimer += Time.deltaTime;
+            if (timeText != null)
+            {
+                timeText.text = "Tempo: " + gameTimer.ToString("F1") + "s";
+            }
+        }
     }
+
 }

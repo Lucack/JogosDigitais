@@ -43,13 +43,20 @@ public class DragAndDrop : MonoBehaviour
         print("Distancia"+distance);
 
         if (distance <= 50)
-            snap(img,lm1);
+        {
+            snap(img, lm1);
+            tocadorInicio.instance.PlayAudio(ManageMosaicoGame.instance.winClip, 1f);
+        }
         else
+        {
             moveBack();
+            tocadorInicio.instance.PlayAudio(ManageMosaicoGame.instance.errorClip, 1f);
+        }
         
     }
     public void Drop(){
        checkMatch();
+       ManageMosaicoGame.instance.CheckWin();
     }
 
 
