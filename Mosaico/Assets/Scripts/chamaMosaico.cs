@@ -17,7 +17,7 @@ public class ChamaMosaico : MonoBehaviour
     {
         print (t);
         t += Time.deltaTime;
-        if (t > 35 && primeira) // o valor 35 é o tempo sem segundos do áudio de Abertura...
+        if (t > 30 && primeira) // o valor 35 é o tempo sem segundos do áudio de Abertura...
         {
             SceneManager.LoadScene("MosaicoAudios");
             primeira = false;

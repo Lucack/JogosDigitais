@@ -228,7 +228,7 @@ GameObject:
   - component: {fileID: 325382412}
   - component: {fileID: 325382411}
   m_Layer: 5
-  m_Name: StarWars_Zoo
+  m_Name: Pokemosaico
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -273,7 +273,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: STAR WARS ZOO
+  m_text: Resgate do Cubone
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b036e053e22324b43b328d3ccd361d0a, type: 2}
   m_sharedMaterial: {fileID: 5529893740839118827, guid: b036e053e22324b43b328d3ccd361d0a, type: 2}
@@ -409,6 +409,8 @@ GameObject:
   - component: {fileID: 527821077}
   - component: {fileID: 527821076}
   - component: {fileID: 527821075}
+  - component: {fileID: 527821080}
+  - component: {fileID: 527821079}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -500,6 +502,44 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &527821079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527821074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 321c1a2d020c944fb8f8207ddff4939d, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &527821080
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527821074}
+  m_CullTransparentMesh: 1
 --- !u!1 &1323363851
 GameObject:
   m_ObjectHideFlags: 0
@@ -723,19 +763,22 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Em uma era al\xE9m da mem\xF3ria dos homens,\r\nquando as estrelas ainda
-    narravam os destinos do universo\u2026\r\n\r\nUma imagem de poder foi despeda\xE7ada.\r\n\r\nO
-    grande Le\xE3o do Zool\xF3gico,  \r\nguardi\xE3o de olhares curiosos e sil\xEAncios
-    reverentes,\r\nsoberano de sua reserva sob o c\xE9u azul da Terra,\r\nteve sua
-    forma fragmentada pelo caos.\r\n\r\nSeus tra\xE7os foram dispersos.\r\nSua presen\xE7a,
-    dividida.\r\nSua majestade, oculta em incont\xE1veis partes.\r\n\r\nMas nenhuma
-    for\xE7a \xE9 capaz de apagar a ess\xEAncia de um rei.\r\n\r\nSomente aquele
-    que possuir\r\npaci\xEAncia inabal\xE1vel,\r\nvis\xE3o agu\xE7ada\r\ne esp\xEDrito
-    determinado\r\npoder\xE1 reunir os fragmentos\r\ne restaurar sua gl\xF3ria.\r\n\r\nO
-    destino est\xE1 nas suas m\xE3os.\r\n\r\nAs pe\xE7as aguardam.\r\nErga o Le\xE3o!!!"
+  m_text: "Nas profundezas das antigas Ru\xEDnas de Kanto, um eco baixinho e triste
+    quebra o sil\xEAncio do lugar. \xC9 um pequeno Cubone! \n\nConhecido como o Pok\xE9mon
+    Solit\xE1rio, ele estava vagando em busca de um lugar seguro quando acidentalmente
+    ativou uma armadilha m\xEDstica deixada por treinadores do passado.\n\nAgora,
+    o pobre Cubone est\xE1 preso dentro de uma barreira de energia impenetr\xE1vel.
+    A chave para desativar essa jaula n\xE3o \xE9 a for\xE7a bruta, mas sim a sabedoria:
+    o antigo selo que controla a armadilha foi quebrado e suas pe\xE7as se espalharam.\n\nTreinador,
+    voc\xEA \xE9 a \xFAnica esperan\xE7a dele! Para quebrar o feiti\xE7o e libertar
+    o Cubone, voc\xEA precisa restaurar o selo m\xE1gico. Reorganize as pe\xE7as
+    embaralhadas e monte o mosaico corretamente para revelar a imagem oculta.\n\nCada
+    pe\xE7a no lugar certo enfraquece a barreira um pouco mais. Concentre-se, resolva
+    o enigma e mostre ao Cubone que ele n\xE3o est\xE1 mais sozinho!\n\nVoc\xEA est\xE1
+    pronto para o desafio?"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0685561b22512e642861008d22ace7aa, type: 2}
-  m_sharedMaterial: {fileID: 4144182613067433656, guid: 0685561b22512e642861008d22ace7aa, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b036e053e22324b43b328d3ccd361d0a, type: 2}
+  m_sharedMaterial: {fileID: 5529893740839118827, guid: b036e053e22324b43b328d3ccd361d0a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -759,18 +802,18 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 34
+  m_fontSizeBase: 34
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 2
+  m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
-  m_characterHorizontalScale: 1.2
+  m_characterHorizontalScale: 0.9
   m_wordSpacing: 0
   m_lineSpacing: 1
   m_lineSpacingMax: 0
@@ -855,7 +898,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 754862f2dec2ac6498b77d3ae8350326, type: 3}
+  m_Resource: {fileID: 8300000, guid: 8fb91142aa2f54850bbc06bf1d9a58b9, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
